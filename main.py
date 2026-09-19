@@ -21,6 +21,7 @@ response = requests.get(url, headers=headers)
 print("Status code:", response.status_code)
 print("Response length:", len(response.text))
 print(response.url)
+print(response.text[:2000])
 
 
 if response.status_code == 200:
