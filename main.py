@@ -18,6 +18,10 @@ target_price = 1600
 
 
 response = requests.get(url, headers=headers)
+print("Status code:", response.status_code)
+print("Response length:", len(response.text))
+print(response.url)
+
 
 
 if response.status_code == 200:
