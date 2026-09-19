@@ -22,7 +22,8 @@ jobs:
 
       - name: Run price tracker
         env:
+          AMAZON_API_KEY: ${{ secrets.AMAZON_API_KEY }}
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           TO_EMAIL: ${{ secrets.TO_EMAIL }}
-        run: python main.py
+        run:  python api_price_alert.py
